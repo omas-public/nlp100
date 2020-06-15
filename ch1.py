@@ -31,27 +31,29 @@ def f04(sentence = 'Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nat
   return {'H': 1, 'He': 2, 'Li': 3, 'Be': 4, 'B': 5, 'C': 6, 'N': 7, 'O': 8, 'F': 9, 'Ne': 10, 'Na': 11, 'Mi': 12, 'Al': 13, 'Si': 14, 'P': 15, 'S': 16, 'Cl': 17, 'Ar': 18, 'K': 19, 'Ca': 20}
 
 # 05. n-gramPermalink
-# 与えられたシーケンス（文字列やリストなど）からn-gramを作る関数を作成せよ．
-def f05(seq, n):
-  pass
+# 与えられたシーケンス（文字列やリストなど）からn-gramを作る関数ngramを作成せよ．
 
-# f05関数を用い，”I am an NLPer”という文から単語bi-gramを得よ
-def f05_word_bigram(sentence = 'I am an NLPer'):
-  split_words = lambda sentence: sentence
 
-  return  f05(split_words(sentence), 2)
+def f05():
+  def ngram(seq, n):
+    pass
 
-# f05関数を用い，”I am an NLPer”という文から文字bi-gramを得よ
-def f05_char_bigram(sentence = 'I am an NLPer'):
-  split_chars = lambda sentence: sentence 
+  def word_bigram(sentence = 'I am an NLPer'):
+    words = sentence.split()
+    return ngram(words, 2)
 
-  return  f05(split_chars(sentence), 2)
+  def char_bigram(sentence = 'I am an NLPer'):
+    chars = list(sentence)
+    return ngram(chars, 2)
+
+  print(word_bigram())
+  print(char_bigram())
+
 
 # 06. 集合
 # “paraparaparadise”と”paragraph”に含まれる文字bi-gramの集合を，それぞれ, XとYとして求め，XとYの和集合，積集合，差集合を求めよ．さらに，’se’というbi-gramがXおよびYに含まれるかどうかを調べよ．
 def f06(word1 = 'paraparaparadise', word2 = 'paragraph'):
-  
-  return 
+  pass 
 
 # 07. テンプレートによる文生成Permalink
 # 引数x, y, zを受け取り「x時のyはz」という文字列を返す関数を実装せよ．さらに，x=12, y=”気温”, z=22.4として，実行結果を確認せよ
