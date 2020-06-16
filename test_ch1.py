@@ -22,14 +22,18 @@ class Test(unittest.TestCase):
     def test_f04(self):
         dict = {'H': 1, 'He': 2, 'Li': 3, 'Be': 4, 'B': 5, 'C': 6, 'N': 7, 'O': 8, 'F': 9, 'Ne': 10, 'Na': 11, 'Mi': 12, 'Al': 13, 'Si': 14, 'P': 15, 'S': 16, 'Cl': 17, 'Ar': 18, 'K': 19, 'Ca': 20}
         self.assertEqual(dict, ch1.f04())
-    
-    def test_f05_word_bigram(self):
-        matrix = [['I', 'am'], ['am', 'an'], ['an', 'NLPer']]
-        self.assertEqual(matrix, ch1.f05_word_bigram())
 
-    def test_f05_char_bigram(self):
-        list = ['I ', ' a', 'am', 'm ', ' a', 'an', 'n ', ' N', 'NL', 'LP', 'Pe', 'er']
-        self.assertEqual(matrix, ch1.f05_word_bigram())
+    def test_f05(self):
+        list = [['Iam', 'aman', 'anNLPer'], ['I ', ' a', 'am', 'm ', ' a', 'an', 'n ', ' N', 'NL', 'LP', 'Pe', 'er']]
+        self.assertEqual(list, ch1.f05())
+
+    # def test_f05_word_bigram(self):
+    #     matrix = [['I', 'am'], ['am', 'an'], ['an', 'NLPer']]
+    #     self.assertEqual(matrix, ch1.f05_word_bigram())
+
+    # def test_f05_char_bigram(self):
+    #     list = ['I ', ' a', 'am', 'm ', ' a', 'an', 'n ', ' N', 'NL', 'LP', 'Pe', 'er']
+    #     self.assertEqual(matrix, ch1.f05_word_bigram())
 
     def test_f07(self):
         str = '12時の気温は22.4'

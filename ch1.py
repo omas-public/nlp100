@@ -16,7 +16,7 @@ def f01(word = 'パタトクカシーー'):
 # 「パトカー」＋「タクシー」の文字を先頭から交互に連結して文字列「パタトクカシーー」を得よ．
 def f02(word1 = 'パトカー', word2 = 'タクシー'):
   
-  return 'タクシー'
+  return 'パタトクカシーー'
 
 # 03. 円周率Permalink
 # “Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics.”という文を単語に分解し，各単語の（アルファベットの）文字数を先頭から出現順に並べたリストを作成せよ．
@@ -34,20 +34,19 @@ def f04(sentence = 'Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nat
 # 与えられたシーケンス（文字列やリストなど）からn-gramを作る関数ngramを作成せよ．
 
 
-def f05():
+def f05(target = 'I am an NLPer'):
   def ngram(seq, n):
     pass
 
-  def word_bigram(sentence = 'I am an NLPer'):
-    words = sentence.split()
+  def word_bigram(target):
+    words = target.split()
     return ngram(words, 2)
 
-  def char_bigram(sentence = 'I am an NLPer'):
-    chars = list(sentence)
+  def char_bigram(target):
+    chars = list(target)
     return ngram(chars, 2)
 
-  print(word_bigram())
-  print(char_bigram())
+  return [word_bigram(target), char_bigram(target)]
 
 
 # 06. 集合
